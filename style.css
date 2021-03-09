@@ -1,0 +1,260 @@
+* {
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+header{
+    background-color: lightblue;
+    width: 90%;
+    margin: auto;
+}
+h1 {
+    padding: 0 0 0 60px;
+    font-weight: 500;
+    font-size: 5rem;
+    color: black;
+    font-family: fantasy;
+    text-align: center;
+  }
+
+img {
+    width: 60%;
+    margin: auto;
+    display: block;
+  }
+body{
+    font-family: "Mukta", sans-serif;
+    font-size: 20px;
+    background-color: lightslategray;
+}
+h2, h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+h2 {
+    font-weight: 900;
+    padding: 15px 0px 15px 0px;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+}
+.grid-flex{
+    flex-wrap: wrap;
+    display: flex;
+}
+section ul li {
+    list-style: none;
+}
+.grid-flex .grid-item img {
+    height: 200px;
+}
+section{
+    margin: auto;
+    width: 90%;
+    min-height: 80vh;
+}
+.grid-floats {
+    padding: 20px;
+    margin: auto;
+}
+
+p {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:1.25rem;
+}
+   
+  main {
+    margin: auto;
+    width: 800px;
+    width: 75%;
+    background-color: #05333b;
+}
+
+  .grid-floats li {
+    list-style: none;
+    width: 260px;
+    height: 480px;
+    float: left;
+    overflow:auto;
+    font-family:Georgia, 'Times New Roman', Times, serif
+    font-size: 1rem;
+}
+  
+  .grid-floats::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+ 
+ 
+  .grid-flex li {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    width: 260px;
+    height: 480px;
+    list-style: none;
+    flex: 250px;
+    overflow: auto;
+     }
+    
+  .grid-floats,
+  .grid-flex {
+    padding: 50px;
+    margin: auto;
+    background-color: white;
+    align-items: center;
+  }
+  
+  .grid-item {
+    border-radius: 12px;
+    margin: 3px;
+    padding: 12px;
+    transition: transform 0.2s ease;
+    border: 3px solid  #132743;
+  }
+  
+  .grid-item:hover {
+    color: #419696;
+    background-color: #f8efd4;
+    border: 1px black solid;
+    transform: scale(1.1, 1.1);
+  }
+  
+  /* tablet */
+  
+  @media only screen and (min-width: 600px) and (max-width: 1023px) 
+  {
+    main {
+      width: 90%;
+    }
+    img {
+      width: 60%;
+    }
+        /* in general for both*/
+  
+        .grid-floats,
+        .grid-flex {
+          width: 90%;
+        }
+      
+        .grid-item p {
+          font-size: 0.8rem;
+        }
+      
+        .grid-item h3 {
+          font-size: 1rem;
+        }
+      
+        .grid-item {
+          transition: none;
+        }
+      
+        .grid-item:hover {
+          transform: none;
+        }
+     
+    h1 {
+      font-size: 7rem;
+      letter-spacing: 72px;
+      padding: 0 0 0 42px;
+      color: white;
+    }
+  
+    h2 {
+      color: white;
+      padding: 15px 0px 15px 0px;
+      font-size: 2.5rem;
+    }
+   
+    
+    /*float*/
+  
+    .grid-floats li {
+      width: 31%;
+      height: 330px;
+    }
+  
+    .grid-floats li:first-child {
+      width: 35%;
+      height: 300px;
+    }
+  
+    .grid-floats li:nth-child(2) {
+      width: 47%;
+      height: 300px;
+    }
+  
+    /*flex*/
+  
+    .grid-flex li {
+      flex-basis: 31%;
+    }
+    .grid-flex li:first-child {
+      flex: 45%;
+    }
+  
+    .grid-flex li:nth-child(2) {
+      flex: 45%;
+    }
+  
+
+  }
+  
+  /* mobile view */
+  
+  @media only screen and (max-width: 600px) {
+    /* general */
+    main {
+      width: 90%;
+    }
+    img {
+      width: 80%;
+    }
+    h1 {
+      letter-spacing: 42px;
+      padding: 0 0 0 32px;
+      font-size: 12vw;
+      color: white;
+    }
+  
+    h2 {
+      font-size: 1rem;
+    }
+    /*float*/
+    
+    .grid-floats li:first-child {
+      width: 95%;
+    }
+    .grid-floats li {
+      width: %;
+      height: auto;
+      float: none;
+    }
+  
+    /*flex */
+    .grid-item {
+      transition: none;
+    }
+  
+    .grid-item:hover {
+      transform: none;
+    }
+  
+    .grid-flex li {
+      flex: 100%;
+    }
+  
+ 
+    .grid-item p {
+      font-size: 0.8rem;
+    }
+  
+    .grid-item h3 {
+      font-size: 1rem;
+    }
+  
+
+  }
+  
